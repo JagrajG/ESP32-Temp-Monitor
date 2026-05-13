@@ -43,7 +43,7 @@
 
 // TIMING
 
-#define SENSOR_UPDATE_MS          1000   
+#define SENSOR_UPDATE_MS          150000   
 
 #define WIFI_CONNECTED_BIT        BIT0
 
