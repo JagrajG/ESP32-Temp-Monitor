@@ -1,0 +1,440 @@
+Command: /Users/jagrajgill/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/jagrajgill/.espressif/v5.5.3/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-210 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/jagrajgill/Desktop/CODE/projects/ESP32-Temp-Monitor/firmware/climate/build/climate.elf /Users/jagrajgill/Desktop/CODE/projects/ESP32-Temp-Monitor/firmware/climate/build/bootloader/bootloader.elf -m '/Users/jagrajgill/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/Users/jagrajgill/.espressif/v5.5.3/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15864
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 12 2026 21:29:19[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f238h (127544) map[0m
+[0;32mI (130) esp_image: segment 1: paddr=0002f260 vaddr=3ffb0000 size=00db8h (  3512) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=9fdd8h (654808) map[0m
+[0;32mI (358) esp_image: segment 3: paddr=000cfe00 vaddr=3ffb0db8 size=035a0h ( 13728) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000d33a8 vaddr=40080000 size=18388h ( 99208) load[0m
+[0;32mI (402) esp_image: segment 5: paddr=000eb738 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (414) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (414) boot: Disabling RNG early entropy source...[0m
+[0;32mI (425) cpu_start: Multicore app[0m
+[0;32mI (433) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (433) cpu_start: Pro cpu start user code[0m
+[0;32mI (433) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (435) app_init: Application information:[0m
+[0;32mI (439) app_init: Project name:     climate[0m
+[0;32mI (443) app_init: App version:      fbf5af6-dirty[0m
+[0;32mI (447) app_init: Compile time:     May 12 2026 21:29:12[0m
+[0;32mI (452) app_init: ELF file SHA256:  b91ee8702...[0m
+[0;32mI (457) app_init: ESP-IDF:          v5.5.3-dirty[0m
+[0;32mI (461) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (465) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (469) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (473) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (479) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (484) heap_init: At 3FFB9080 len 00026F80 (155 KiB): DRAM[0m
+[0;32mI (489) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (495) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (500) heap_init: At 40098388 len 00007C78 (31 KiB): IRAM[0m
+[0;32mI (507) spi_flash: detected chip: generic[0m
+[0;32mI (509) spi_flash: flash io: dio[0m
+[0;33mW (512) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (525) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (535) CLIMATE_MONITOR: Starting ESP32 Climate Monitor[0m
+[0;32mI (555) CLIMATE_MONITOR: I2C initialized[0m
+[0;33mW (655) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (655) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;32mI (765) CLIMATE_MONITOR: OLED initialized[0m
+[0;32mI (885) wifi:wifi driver task: 3ffc15bc, prio:23, stack:6656, core=0[0m
+[0;32mI (895) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (895) wifi:wifi certification version: v7.0[0m
+[0;32mI (895) wifi:config NVS flash: enabled[0m
+[0;32mI (895) wifi:config nano formatting: disabled[0m
+[0;32mI (895) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (905) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (905) wifi:Init management short buffer num: 32[0m
+[0;32mI (915) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (915) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (915) wifi:Init static rx buffer num: 10[0m
+[0;32mI (925) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (925) wifi_init: rx ba win: 6[0m
+[0;32mI (935) wifi_init: accept mbox: 6[0m
+[0;32mI (935) wifi_init: tcpip mbox: 32[0m
+[0;32mI (935) wifi_init: udp mbox: 6[0m
+[0;32mI (935) wifi_init: tcp mbox: 6[0m
+[0;32mI (945) wifi_init: tcp tx win: 5760[0m
+[0;32mI (945) wifi_init: tcp rx win: 5760[0m
+[0;32mI (945) wifi_init: tcp mss: 1440[0m
+[0;32mI (955) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (955) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (955) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (965) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (1045) wifi:mode : sta (20:e7:c8:ec:d2:84)[0m
+[0;32mI (1045) wifi:enable tsf[0m
+[0;32mI (1045) CLIMATE_MONITOR: Connecting to Wi-Fi...[0m
+[0;32mI (1065) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1065) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1075) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1085) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1095) wifi:<ba-add>idx:0 (ifx:0, a2:b5:3c:33:d0:e3), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1115) wifi:connected with TELUS6536, aid = 18, channel 11, BW20, bssid = a2:b5:3c:33:d0:e3[0m
+[0;32mI (1115) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (1115) wifi:pm start, type: 1[0m
+
+[0;32mI (1115) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1125) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1145) wifi:<ba-add>idx:1 (ifx:0, a2:b5:3c:33:d0:e3), tid:1, ssn:0, winSize:64[0m
+[0;32mI (2195) esp_netif_handlers: sta ip: 192.168.1.237, mask: 255.255.255.0, gw: 192.168.1.254[0m
+[0;32mI (2195) CLIMATE_MONITOR: Got IP: 192.168.1.237[0m
+[0;32mI (2195) CLIMATE_MONITOR: Wi-Fi connected[0m
+[0;32mI (2325) CLIMATE_MONITOR: Temperature: 20.76 C, Humidity: 52.36 %[0m
+[0;32mI (2435) CLIMATE_MONITOR: Posting JSON: {"temperature":20.76,"humidity":52.36}[0m
+[1;31mE (2515) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (2525) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2525) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2525) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3665) CLIMATE_MONITOR: Temperature: 20.74 C, Humidity: 52.34 %[0m
+[0;32mI (3775) CLIMATE_MONITOR: Posting JSON: {"temperature":20.74,"humidity":52.34}[0m
+[1;31mE (3875) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (3875) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3875) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (3885) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5015) CLIMATE_MONITOR: Temperature: 20.75 C, Humidity: 52.32 %[0m
+[0;32mI (5125) CLIMATE_MONITOR: Posting JSON: {"temperature":20.75,"humidity":52.32}[0m
+[1;31mE (5165) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (5175) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5175) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5175) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6315) CLIMATE_MONITOR: Temperature: 21.01 C, Humidity: 52.34 %[0m
+[0;32mI (6425) CLIMATE_MONITOR: Posting JSON: {"temperature":21.01,"humidity":52.34}[0m
+[1;31mE (6435) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (6435) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (6435) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6445) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7575) CLIMATE_MONITOR: Temperature: 21.17 C, Humidity: 52.47 %[0m
+[0;32mI (7685) CLIMATE_MONITOR: Posting JSON: {"temperature":21.17,"humidity":52.47}[0m
+[1;31mE (7735) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (7735) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (7735) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7735) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8875) CLIMATE_MONITOR: Temperature: 21.25 C, Humidity: 52.83 %[0m
+[0;32mI (8985) CLIMATE_MONITOR: Posting JSON: {"temperature":21.25,"humidity":52.83}[0m
+[1;31mE (9105) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (9105) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (9105) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9115) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10255) CLIMATE_MONITOR: Temperature: 21.31 C, Humidity: 53.25 %[0m
+[0;32mI (10365) CLIMATE_MONITOR: Posting JSON: {"temperature":21.31,"humidity":53.25}[0m
+[1;31mE (10395) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (10395) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (10395) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10395) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11535) CLIMATE_MONITOR: Temperature: 21.34 C, Humidity: 53.65 %[0m
+[0;32mI (11645) CLIMATE_MONITOR: Posting JSON: {"temperature":21.34,"humidity":53.65}[0m
+[1;31mE (11665) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (11665) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11665) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11665) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12805) CLIMATE_MONITOR: Temperature: 21.27 C, Humidity: 54.07 %[0m
+[0;32mI (12915) CLIMATE_MONITOR: Posting JSON: {"temperature":21.27,"humidity":54.07}[0m
+[1;31mE (12955) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (12955) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (12955) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12955) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14095) CLIMATE_MONITOR: Temperature: 21.20 C, Humidity: 54.32 %[0m
+[0;32mI (14205) CLIMATE_MONITOR: Posting JSON: {"temperature":21.20,"humidity":54.32}[0m
+[1;31mE (14215) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (14225) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (14225) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14225) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (15365) CLIMATE_MONITOR: Temperature: 21.84 C, Humidity: 54.62 %[0m
+[0;32mI (15475) CLIMATE_MONITOR: Posting JSON: {"temperature":21.84,"humidity":54.62}[0m
+[1;31mE (15485) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (15485) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15485) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15495) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16625) CLIMATE_MONITOR: Temperature: 22.21 C, Humidity: 55.08 %[0m
+[0;32mI (16735) CLIMATE_MONITOR: Posting JSON: {"temperature":22.21,"humidity":55.08}[0m
+[1;31mE (16745) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (16745) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16745) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16755) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17885) CLIMATE_MONITOR: Temperature: 22.04 C, Humidity: 55.52 %[0m
+[0;32mI (17995) CLIMATE_MONITOR: Posting JSON: {"temperature":22.04,"humidity":55.52}[0m
+[1;31mE (18115) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (18125) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18125) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18125) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19265) CLIMATE_MONITOR: Temperature: 22.04 C, Humidity: 55.97 %[0m
+[0;32mI (19375) CLIMATE_MONITOR: Posting JSON: {"temperature":22.04,"humidity":55.97}[0m
+[1;31mE (19405) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (19405) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19405) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19415) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20545) CLIMATE_MONITOR: Temperature: 21.88 C, Humidity: 56.30 %[0m
+[0;32mI (20655) CLIMATE_MONITOR: Posting JSON: {"temperature":21.88,"humidity":56.30}[0m
+[1;31mE (20735) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (20735) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20735) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20745) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21875) CLIMATE_MONITOR: Temperature: 21.73 C, Humidity: 56.55 %[0m
+[0;32mI (21985) CLIMATE_MONITOR: Posting JSON: {"temperature":21.73,"humidity":56.55}[0m
+[1;31mE (22115) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (22115) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22115) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22115) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (23255) CLIMATE_MONITOR: Temperature: 21.69 C, Humidity: 56.79 %[0m
+[0;32mI (23365) CLIMATE_MONITOR: Posting JSON: {"temperature":21.69,"humidity":56.79}[0m
+[1;31mE (23405) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (23405) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23405) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (23405) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24545) CLIMATE_MONITOR: Temperature: 21.62 C, Humidity: 56.91 %[0m
+[0;32mI (24655) CLIMATE_MONITOR: Posting JSON: {"temperature":21.62,"humidity":56.91}[0m
+[1;31mE (25145) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (25145) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25145) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (25145) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (26285) CLIMATE_MONITOR: Temperature: 21.57 C, Humidity: 57.05 %[0m
+[0;32mI (26395) CLIMATE_MONITOR: Posting JSON: {"temperature":21.57,"humidity":57.05}[0m
+[1;31mE (26515) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (26515) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26515) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26525) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27655) CLIMATE_MONITOR: Temperature: 21.53 C, Humidity: 57.09 %[0m
+[0;32mI (27765) CLIMATE_MONITOR: Posting JSON: {"temperature":21.53,"humidity":57.09}[0m
+[1;31mE (27805) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (27805) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27805) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27805) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28945) CLIMATE_MONITOR: Temperature: 21.49 C, Humidity: 57.08 %[0m
+[0;32mI (29055) CLIMATE_MONITOR: Posting JSON: {"temperature":21.49,"humidity":57.08}[0m
+[1;31mE (29175) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (29175) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29175) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29185) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30315) CLIMATE_MONITOR: Temperature: 21.47 C, Humidity: 57.08 %[0m
+[0;32mI (30425) CLIMATE_MONITOR: Posting JSON: {"temperature":21.47,"humidity":57.08}[0m
+[1;31mE (30465) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (30465) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30465) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (30465) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (31605) CLIMATE_MONITOR: Temperature: 21.47 C, Humidity: 56.98 %[0m
+[0;32mI (31715) CLIMATE_MONITOR: Posting JSON: {"temperature":21.47,"humidity":56.98}[0m
+[1;31mE (31845) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (31845) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (31845) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (31845) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (32985) CLIMATE_MONITOR: Temperature: 21.42 C, Humidity: 56.88 %[0m
+[0;32mI (33095) CLIMATE_MONITOR: Posting JSON: {"temperature":21.42,"humidity":56.88}[0m
+[1;31mE (33105) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (33105) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (33105) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (33115) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (34245) CLIMATE_MONITOR: Temperature: 21.40 C, Humidity: 56.79 %[0m
+[0;32mI (34355) CLIMATE_MONITOR: Posting JSON: {"temperature":21.40,"humidity":56.79}[0m
+[1;31mE (34505) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (34505) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (34505) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (34505) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (35645) CLIMATE_MONITOR: Temperature: 21.37 C, Humidity: 56.63 %[0m
+[0;32mI (35755) CLIMATE_MONITOR: Posting JSON: {"temperature":21.37,"humidity":56.63}[0m
+[1;31mE (35785) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (35785) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (35795) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (35795) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (36935) CLIMATE_MONITOR: Temperature: 21.35 C, Humidity: 56.52 %[0m
+[0;32mI (37045) CLIMATE_MONITOR: Posting JSON: {"temperature":21.35,"humidity":56.52}[0m
+[1;31mE (37055) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (37055) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (37055) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (37065) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (38195) CLIMATE_MONITOR: Temperature: 21.34 C, Humidity: 56.36 %[0m
+[0;32mI (38305) CLIMATE_MONITOR: Posting JSON: {"temperature":21.34,"humidity":56.36}[0m
+[1;31mE (38325) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (38325) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (38325) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (38335) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (39465) CLIMATE_MONITOR: Temperature: 21.33 C, Humidity: 56.23 %[0m
+[0;32mI (39575) CLIMATE_MONITOR: Posting JSON: {"temperature":21.33,"humidity":56.23}[0m
+[1;31mE (39725) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (39725) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (39725) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (39735) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (40865) CLIMATE_MONITOR: Temperature: 21.30 C, Humidity: 56.12 %[0m
+[0;32mI (40975) CLIMATE_MONITOR: Posting JSON: {"temperature":21.30,"humidity":56.12}[0m
+[1;31mE (41015) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (41015) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (41015) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (41015) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (42155) CLIMATE_MONITOR: Temperature: 21.29 C, Humidity: 56.03 %[0m
+[0;32mI (42265) CLIMATE_MONITOR: Posting JSON: {"temperature":21.29,"humidity":56.03}[0m
+[1;31mE (42275) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (42275) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (42275) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (42285) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (43415) CLIMATE_MONITOR: Temperature: 21.23 C, Humidity: 55.90 %[0m
+[0;32mI (43525) CLIMATE_MONITOR: Posting JSON: {"temperature":21.23,"humidity":55.90}[0m
+[1;31mE (43535) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (43545) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (43545) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (43545) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (44685) CLIMATE_MONITOR: Temperature: 21.25 C, Humidity: 55.76 %[0m
+[0;32mI (44795) CLIMATE_MONITOR: Posting JSON: {"temperature":21.25,"humidity":55.76}[0m
+[1;31mE (44805) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (44805) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (44805) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (44815) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (45945) CLIMATE_MONITOR: Temperature: 21.26 C, Humidity: 55.63 %[0m
+[0;32mI (46055) CLIMATE_MONITOR: Posting JSON: {"temperature":21.26,"humidity":55.63}[0m
+[1;31mE (46175) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (46175) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (46175) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (46185) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (47315) CLIMATE_MONITOR: Temperature: 21.25 C, Humidity: 55.54 %[0m
+[0;32mI (47425) CLIMATE_MONITOR: Posting JSON: {"temperature":21.25,"humidity":55.54}[0m
+[1;31mE (47435) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (47435) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (47435) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (47435) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (48575) CLIMATE_MONITOR: Temperature: 21.24 C, Humidity: 55.40 %[0m
+[0;32mI (48685) CLIMATE_MONITOR: Posting JSON: {"temperature":21.24,"humidity":55.40}[0m
+[1;31mE (48835) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (48845) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (48845) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (48845) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (49985) CLIMATE_MONITOR: Temperature: 21.25 C, Humidity: 55.27 %[0m
+[0;32mI (50095) CLIMATE_MONITOR: Posting JSON: {"temperature":21.25,"humidity":55.27}[0m
+[1;31mE (50105) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (50105) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (50105) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (50115) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (51245) CLIMATE_MONITOR: Temperature: 21.25 C, Humidity: 55.20 %[0m
+[0;32mI (51355) CLIMATE_MONITOR: Posting JSON: {"temperature":21.25,"humidity":55.20}[0m
+[1;31mE (51505) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (51505) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (51505) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (51505) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (52645) CLIMATE_MONITOR: Temperature: 21.22 C, Humidity: 55.08 %[0m
+[0;32mI (52755) CLIMATE_MONITOR: Posting JSON: {"temperature":21.22,"humidity":55.08}[0m
+[1;31mE (52785) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (52785) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (52785) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (52795) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (53925) CLIMATE_MONITOR: Temperature: 21.22 C, Humidity: 54.99 %[0m
+[0;32mI (54035) CLIMATE_MONITOR: Posting JSON: {"temperature":21.22,"humidity":54.99}[0m
+[1;31mE (54165) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (54165) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (54165) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (54175) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (55305) CLIMATE_MONITOR: Temperature: 21.22 C, Humidity: 54.93 %[0m
+[0;32mI (55415) CLIMATE_MONITOR: Posting JSON: {"temperature":21.22,"humidity":54.93}[0m
+[1;31mE (55445) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (55455) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (55455) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (55455) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (56595) CLIMATE_MONITOR: Temperature: 21.21 C, Humidity: 54.85 %[0m
+[0;32mI (56705) CLIMATE_MONITOR: Posting JSON: {"temperature":21.21,"humidity":54.85}[0m
+[1;31mE (56825) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (56825) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (56825) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (56835) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (57965) CLIMATE_MONITOR: Temperature: 21.21 C, Humidity: 54.80 %[0m
+[0;32mI (58075) CLIMATE_MONITOR: Posting JSON: {"temperature":21.21,"humidity":54.80}[0m
+[1;31mE (58115) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (58115) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (58115) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (58115) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (59255) CLIMATE_MONITOR: Temperature: 21.21 C, Humidity: 54.76 %[0m
+[0;32mI (59365) CLIMATE_MONITOR: Posting JSON: {"temperature":21.21,"humidity":54.76}[0m
+[1;31mE (59495) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (59495) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (59495) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (59495) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (60635) CLIMATE_MONITOR: Temperature: 21.21 C, Humidity: 54.67 %[0m
+[0;32mI (60745) CLIMATE_MONITOR: Posting JSON: {"temperature":21.21,"humidity":54.67}[0m
+[1;31mE (60815) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (60815) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (60815) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (60815) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (61955) CLIMATE_MONITOR: Temperature: 21.23 C, Humidity: 54.62 %[0m
+[0;32mI (62065) CLIMATE_MONITOR: Posting JSON: {"temperature":21.23,"humidity":54.62}[0m
+[1;31mE (62105) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (62105) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (62105) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (62115) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (63245) CLIMATE_MONITOR: Temperature: 21.22 C, Humidity: 54.57 %[0m
+[0;32mI (63355) CLIMATE_MONITOR: Posting JSON: {"temperature":21.22,"humidity":54.57}[0m
+[1;31mE (63485) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (63485) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (63485) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (63485) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (64625) CLIMATE_MONITOR: Temperature: 21.23 C, Humidity: 54.53 %[0m
+[0;32mI (64735) CLIMATE_MONITOR: Posting JSON: {"temperature":21.23,"humidity":54.53}[0m
+[1;31mE (64745) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (64745) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (64755) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (64755) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (65895) CLIMATE_MONITOR: Temperature: 21.21 C, Humidity: 54.45 %[0m
+[0;32mI (66005) CLIMATE_MONITOR: Posting JSON: {"temperature":21.21,"humidity":54.45}[0m
+[1;31mE (66145) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (66145) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (66145) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (66155) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (67285) CLIMATE_MONITOR: Temperature: 21.25 C, Humidity: 54.44 %[0m
+[0;32mI (67395) CLIMATE_MONITOR: Posting JSON: {"temperature":21.25,"humidity":54.44}[0m
+[1;31mE (67405) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (67405) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (67405) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (67415) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (68545) CLIMATE_MONITOR: Temperature: 21.23 C, Humidity: 54.38 %[0m
+[0;32mI (68655) CLIMATE_MONITOR: Posting JSON: {"temperature":21.23,"humidity":54.38}[0m
+[1;31mE (68665) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (68665) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (68665) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (68675) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (69805) CLIMATE_MONITOR: Temperature: 21.23 C, Humidity: 54.38 %[0m
+[0;32mI (69915) CLIMATE_MONITOR: Posting JSON: {"temperature":21.23,"humidity":54.38}[0m
+[1;31mE (70035) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (70035) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (70045) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (70045) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (71185) CLIMATE_MONITOR: Temperature: 21.22 C, Humidity: 54.34 %[0m
+[0;32mI (71295) CLIMATE_MONITOR: Posting JSON: {"temperature":21.22,"humidity":54.34}[0m
+[1;31mE (71305) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (71305) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (71305) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (71315) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (72445) CLIMATE_MONITOR: Temperature: 21.25 C, Humidity: 54.28 %[0m
+[0;32mI (72555) CLIMATE_MONITOR: Posting JSON: {"temperature":21.25,"humidity":54.28}[0m
+[1;31mE (72695) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (72695) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (72705) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (72705) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (73835) CLIMATE_MONITOR: Temperature: 21.22 C, Humidity: 54.25 %[0m
+[0;32mI (73945) CLIMATE_MONITOR: Posting JSON: {"temperature":21.22,"humidity":54.25}[0m
+[1;31mE (73955) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (73955) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (73955) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (73965) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (75095) CLIMATE_MONITOR: Temperature: 21.20 C, Humidity: 54.21 %[0m
+[0;32mI (75205) CLIMATE_MONITOR: Posting JSON: {"temperature":21.20,"humidity":54.21}[0m
+[1;31mE (75265) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (75265) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (75265) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (75265) CLIMATE_MONITOR: HTTP POST failed: ESP_ERR_HTTP_CONNECT[0m

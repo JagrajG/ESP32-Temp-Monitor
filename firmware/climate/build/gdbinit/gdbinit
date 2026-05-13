@@ -1,0 +1,2 @@
+source /Users/jagrajgill/Desktop/CODE/projects/ESP32-Temp-Monitor/firmware/climate/build/gdbinit/symbols
+source /Users/jagrajgill/Desktop/CODE/projects/ESP32-Temp-Monitor/firmware/climate/build/gdbinit/connect
