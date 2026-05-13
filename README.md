@@ -38,28 +38,6 @@ OLED: 0x3C
 SHT41: 0x44
 ```
 
-# Project Struct
-
-esp32-climate-monitor/
-│
-├── firmware/
-│ └── climate-monitor/
-│ └── main/
-│ └── climate-monitor.c
-│
-├── backend/
-│ ├── main.py
-│ ├── database.py
-│ ├── requirements.txt
-│ └── climate.db
-│
-├── frontend/
-│ ├── index.html
-│ ├── style.css
-│ └── app.js
-│
-└── README.md
-
 # Commands
 
 Firmware:
