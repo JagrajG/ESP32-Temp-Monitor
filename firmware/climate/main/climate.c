@@ -18,8 +18,8 @@
 
 // USER SETTINGS
 
-#define WIFI_SSID      "TELUS6536"
-#define WIFI_PASSWORD  "hzn7c5dbkp"
+#define WIFI_SSID      "wifi-name"
+#define WIFI_PASSWORD  "wifi-pass"
 
 #define API_URL        "http://192.168.1.91:8000/readings"
 
@@ -43,7 +43,8 @@
 
 // TIMING
 
-#define SENSOR_UPDATE_MS          150000   
+#define SENSOR_UPDATE_MS         1000
+//  150000   
 
 #define WIFI_CONNECTED_BIT        BIT0
 
@@ -362,9 +363,7 @@ static esp_err_t sht41_read(float *temperature_c, float *humidity_percent)
     return ESP_OK;
 }
 
-// ===============================
 // WIFI FUNCTIONS
-// ===============================
 
 static void wifi_event_handler(
     void *arg,
@@ -500,9 +499,7 @@ static esp_err_t post_reading_to_api(float temperature_c, float humidity_percent
     }
 }
 
-// ===============================
 // APP MAIN
-// ===============================
 
 void app_main(void)
 {

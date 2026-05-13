@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESP32 Climate Monitor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+      <section class="hero">
+        <p class="eyebrow">ESP32 Climate Monitor</p>
+        <h1>Temperature & Humidity Dashboard</h1>
+        <p class="subtitle">
+          Live readings from your ESP32, SHT41 sensor, and OLED climate monitor.
+        </p>
+      </section>
+
+      <section class="status-card">
+        <div>
+          <p class="label">Server Status</p>
+          <h2 id="statusText">Checking...</h2>
+        </div>
+        <div class="status-dot" id="statusDot"></div>
+      </section>
+
+      <section class="cards">
+        <article class="card">
+          <p class="label">Temperature</p>
+          <h2><span id="temperatureValue">--</span>°C</h2>
+        </article>
+
+        <article class="card">
+          <p class="label">Humidity</p>
+          <h2><span id="humidityValue">--</span>%</h2>
+        </article>
+
+        <article class="card">
+          <p class="label">Last Updated</p>
+          <h2 id="lastUpdatedValue">--</h2>
+        </article>
+      </section>
+
+      <section class="chart-card">
+        <div class="chart-header">
+          <div>
+            <p class="label">Last 24 Hours</p>
+            <h2>Climate Trend</h2>
+          </div>
+          <p class="chart-note">Updates automatically</p>
+        </div>
+
+        <canvas id="climateChart"></canvas>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
